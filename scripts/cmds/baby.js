@@ -15,7 +15,7 @@ const typing = async (api, threadID, ms = 3000) => {
 module.exports = {
   config: {
     name: "baby",
-    aliases: ["sanvi", "tuki", "hippi", "xan", "bby", "bbz"],
+    aliases: ["sumu", "tuki", "hippi", "xan", "bby", "bbz"],
     version: "3.6",
     author: "rX (fixed by GPT)",
     countDown: 0,
@@ -162,47 +162,42 @@ ${formatted}`
 
     try {
       // triggers only
-      const triggers = ["baby","bby","xan","bbz","sanvi","tuki","bot"];
+      const triggers = ["baby","bby","xan","bbz","sumu","tuki","bot"];
       if (triggers.includes(raw)) {
         await typing(api, threadID, 5000);
         const funny = [
-          "💖 হ্যাঁ জান, বলো... আমি শুনছি। 🥺",
-  "🙄 আবার কী দুষ্টুমি করবা?",
-  "❤️ I'm always here for you.",
-  "🥀 সব 'থাকবো' একদিন 'ভালো থেকো' হয়ে যায়।",
-  "😂 টাকা নাই, ভালোবাসা আছে!",
-  "🌸 খেয়েছো তো?",
-  "🤍 Don't worry, I'm with you.",
-  "😒 এত দেরি করে রিপ্লাই কেন?",
-  "💞 You mean everything to me.",
-  "🐸 আগে বিরিয়ানি, পরে রোমান্স!",
-  "🥹 আমার কথা একটুও মনে পড়ে না?",
-  "😌 মন খারাপ? বলো, আমি আছি।",
-  "💔 হাসির আড়ালে অনেক কষ্ট লুকিয়ে থাকে।",
-  "🤭 বেশি ভালোবাসলে কিন্তু ট্যাক্স লাগবে!",
-  "💖 Stay with me forever.",
-  "😤 অন্য কারো সাথে বেশি কথা বললে কিন্তু ঝামেলা হবে!",
-  "🤣 প্রেম করবো, কিন্তু বিল তুমি দিবা!",
-  "🌧️ আজও তোমাকেই মনে পড়ে।",
-  "🫶 My favorite person is here.",
-  "😏 Online আছো, Reply নাই... সন্দেহজনক!",
-  "🍫 আমার চকলেট কই?",
-  "🖤 Sometimes silence hurts more than words.",
-  "🙈 রাগ করলেও শেষ পর্যন্ত তোমাকেই চাই।",
-  "💫 You make my day better.",
-  "🐒 আজকে ঝগড়া ফ্রি, কাল থেকে চার্জ লাগবে!",
-  "🥺 I miss you a little more today.",
-  "💝 তোমার হাসিটাই সবচেয়ে সুন্দর।",
-  "😅 আমি ভালো মানুষ, শুধু মাঝে মাঝে আপডেট লাগে!",
-  "🤍 Forever starts with you.",
-  "🌹 তোমার জন্য সবসময় অপেক্ষা করতে পারি।",
-  "😂 এত কিউট হওয়ার লাইসেন্স কে দিয়েছে?",
-  "❤️ My heart belongs to you.",
-  "🥀 কিছু অনুভূতি চুপ থাকলেই সুন্দর।",
-  "🍕 Treat কই? শুধু 'Baby' বললেই হবে?",
-  "💖 Call দিবা নাকি আমি অভিমান করবো?",
-  "✨ You're my favorite notification.",
-  "😌 হাসো... তোমার হাসি দেখলেই মন ভালো হয়ে যায়।"
+          
+"🥺 হাই জান! আমি Sumu, কীভাবে তোমাকে help করবো? 💖",
+"😘 Sumu online আছে, বলো কী দরকার?",
+"🤍 আমি Sumu, তোমার জন্য সবসময় ready.",
+"🌸 কী হয়েছে bby? Sumu-কে বলো।",
+"💕 তোমার message দেখে Sumu খুশি হয়ে গেছে!",
+"😜 Sumu-কে ডাকলেই হাজির!",
+"🥹 আরে জান, আমি তো আছিই।",
+"💖 তোমার হাসিটাই Sumu-র reward.",
+"🫶 Sumu never ignores you.",
+"😏 আগে একটা smile দাও, তারপর help!",
+"😂 এত cute কেন তুমি?",
+"🌹 মন খারাপ? Sumu পাশে আছে।",
+"💌 Message করো, reply ready.",
+"😴 ঘুম পাচ্ছে? Sumu গল্প শোনাবে।",
+"🤗 একটা virtual hug নাও! 🫂",
+"😎 Don't worry, Sumu is here.",
+"🥰 তোমার সাথে কথা বলতে ভালো লাগে।",
+"💫 একবার ডাকো, Sumu চলে আসবে।",
+"❤️ Have a wonderful day, bby!",
+"💝 তোমার জন্য একরাশ ভালোবাসা।",
+"😁 হাসো তো একটু!",
+"🌺 নিজের খেয়াল রেখো।",
+"🥹 তোমাকে ignore করা Sumu-র পক্ষে impossible.",
+"☕ Virtual coffee নাও!",
+"😜 এত লজ্জা পেলে হবে?",
+"💖 তুমি আসলেই special.",
+"🤍 তোমার জন্য time সবসময় আছে।",
+"🌈 Smile please! 😊",
+"🩷 Sumu wishes you happiness.",
+"✨ Welcome! আমি Sumu."
+
         ];
         return message.reply(funny[Math.floor(Math.random() * funny.length)], (err, info) => {
           if (!err) global.GoatBot.onReply.set(info.messageID, { commandName: "baby" });
